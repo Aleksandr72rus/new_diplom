@@ -10,8 +10,7 @@ class OrderAdm(admin.ModelAdmin):
     list_filter = ('order_status', 'order_theme')
     fields = ('id', 'order_theme', 'order_status', 'order_dt', 'order_name', 'order_phone')
     readonly_fields = ('id', 'order_dt')
-    # inlines = [Comment]
-    # list_per_page = 10
+
 
 
 admin.site.register(Order, OrderAdm)

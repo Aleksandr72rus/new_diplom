@@ -13,7 +13,7 @@
             <div class="card product_card" style="width: 18rem; background-color: #f0e04f;">
                 <div class="card-body">
                     <h5 class="card-title">Капитальный</h5>
-                    <p class="card-text">демонтаж старых конструкций, монтаж новых перегородок, установка окон и входных дверей, прокладка новых коммуникаций (электропроводки, труб водопровода и канализации)</p>
+                    <p class="card-text">Демонтаж старых конструкций, монтаж новых перегородок, установка окон и входных дверей, прокладка новых коммуникаций (электропроводки, труб водопровода и канализации)</p>
                     <h3>{{ pc_2.pc_value }} руб.</h3>
                 </div>
             </div>
@@ -35,8 +35,9 @@
             <thead class="alert-success">
             <tr>
                 <th scope="col">Услуга</th>
+                <th scope="col">Описание</th>
                 <th scope="col">Старая цена</th>
-                <th scope="col">Цена после регистрации</th>
+                <th scope="col">Цена со скидкой</th>
             </tr>
             </thead>
             <tbody>
@@ -44,6 +45,7 @@
             {% for obj in price_table %}
             <tr>
                 <td>{{ obj.pt_title }}</td>
+                <td>{{ obj.pt_description }}</td>
                 <td>
                     <del>{{ obj.pt_old_price }}</del>
                 </td>
@@ -52,22 +54,22 @@
             {% endfor %}
 
         {% for obj in price_table %}
-<div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h2 class="mb-0">
-        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          {{ obj.pt_title }}
-        </button>
-      </h2>
-    </div>
+<!--<div class="accordion" id="accordionExample">-->
+<!--  <div class="card">-->
+<!--    <div class="card-header" id="headingOne">-->
+<!--      <h2 class="mb-0">-->
+<!--        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
+<!--          {{ obj.pt_title }}-->
+<!--        </button>-->
+<!--      </h2>-->
+<!--    </div>-->
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-        {{ obj.pt_description }} {{ obj.pt_new_price }}
-      </div>
-    </div>
-  </div>
+<!--    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">-->
+<!--      <div class="card-body">-->
+<!--        {{ obj.pt_description }} {{ obj.pt_new_price }}-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 <!--  <div class="card">-->
 <!--    <div class="card-header" id="headingTwo">-->
 <!--      <h2 class="mb-0">-->

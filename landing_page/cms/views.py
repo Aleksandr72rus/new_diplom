@@ -7,12 +7,18 @@ from crm.forms import OrderForm
 
 def first_page(request):
     slider = CmsSlider.objects.all()
+    # pc_1 = PriceCard.objects.get(pk=1)
+    # pc_2 = PriceCard.objects.get(pk=2)
+    # pc_3 = PriceCard.objects.get(pk=3)
     price_card = PriceCard.objects.all()
     price_table = PriceTable.objects.all()
     form = OrderForm()
     context = {
         'slider': slider,
         'price_card': price_card,
+        # 'pc_1': pc_1,
+        # 'pc_2': pc_2,
+        # 'pc_3': pc_3,
         'price_table': price_table,
         'form': form,
     }
