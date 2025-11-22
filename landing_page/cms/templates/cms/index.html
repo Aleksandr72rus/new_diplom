@@ -4,7 +4,7 @@
 
 {% include 'cms/carusel.html' %}
 
-<!--{% include 'cms/price.html' %}-->
+{% include 'cms/price.html' %}
 
 <!-- форма -->
 <section>
@@ -15,7 +15,7 @@
                 {% csrf_token %}
                  <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Тема</label><br>
-                    <select id="theme" name="theme">
+                    <select id="theme" name="theme" class="form-control">
                         <option value="disain">Дизайн интерьера</option>
                         <option value="1-k">Ремонт 1-комнатной квартиры</option>
                         <option value="2-k">Ремонт 2-комнатной квартиры</option>

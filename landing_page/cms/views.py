@@ -22,7 +22,7 @@ def first_page(request):
 def thanks_page(request):
     if request.POST:
         theme = request.POST['theme']
-        # short = request.POST['short']
+        short = request.POST['short']
         name = request.POST['name']
         phone = request.POST['phone']
         order_el = Order(order_theme=theme, order_name=name, order_phone=phone)
